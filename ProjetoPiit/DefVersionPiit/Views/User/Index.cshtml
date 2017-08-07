@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DefVersionPiit.Models.Usuario>
+
+@{
+    ViewBag.Title = "index";
+    using (Html.BeginForm("Adiciona", "User", FormMethod.Post))
+    {
+        @Html.ValidationMessage("usuario.Invalido")
+
+        @Html.LabelFor(u => u.Nome, "Nome:")
+        @Html.TextBoxFor(u => u.Nome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.Nome)
+
+        @Html.LabelFor(u => u.Email, "E-mail:")
+        @Html.TextBoxFor(u => u.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.Email)
+
+        @Html.LabelFor(u => u.DataNascimento, "Data de nascimento:")
+        @Html.TextBoxFor(u => u.DataNascimento, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.DataNascimento)
+
+        /* @Html.LabelFor(u => u.Endereco, "Endereço:")
+         @Html.TextBoxFor(u => u.Endereco, new { @class = "form-control" })
+         @Html.ValidationMessageFor(u => u.Endereco)
+
+         @Html.LabelFor(u => u.Cep, "CEP:")
+         @Html.TextBoxFor(u => u.Cep, new { @class = "form-control" })
+         @Html.ValidationMessageFor(u => u.Cep)*/
+
+        @Html.LabelFor(u => u.Observacoes, "Observações:")
+        @Html.TextBoxFor(u => u.Observacoes, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.Observacoes)
+
+        @Html.LabelFor(u => u.Senha, "Senha:")
+        @Html.PasswordFor(u => u.Senha, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.Senha)
+
+        /*@Html.LabelFor(u => u.ConfirmacaoSenha, "Confirme sua senha:")
+        @Html.PasswordFor(u => u.ConfirmacaoSenha, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.ConfirmacaoSenha)*/
+
+        <input type="submit" value="index" />
+    }
+}
+
+<!--formulario utilizando as tegs HtmlHelps do asp.net-->
+
+<h2>index Ta aqui em cima o código!!!</h2>
+
+
+
